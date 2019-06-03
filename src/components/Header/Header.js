@@ -1,23 +1,17 @@
 import React from "react";
 
-export default function Header({ children, title, styleClass }) {
+export default function Header() {
   return (
     <Header>
       <div className="container-fluid">
-        <div className={`row align-items-center ${styleClass}`} />
+        <div className="row align-items-center" />
         <div className="col text-center">
           <h1 className="text-light text-uppercase display-3 letter-spacing text-slanted">
             {title}
           </h1>
-          {children}
+          <p>Hello from Header</p>
         </div>
-        <p>Hello from Header</p>
       </div>
     </Header>
   );
 }
-
-Header.defaultProps = {
-  title: "default-title",
-  styleClass: "header-hero"
-};
