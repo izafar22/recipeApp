@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Recipes from "./pages/Recipes";
 import SingleRecipe from "./pages/SingleRecipe";
 import DefaultPage from "./pages/DefaultPage";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
