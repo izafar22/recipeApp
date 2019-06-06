@@ -9,8 +9,25 @@ export default class SingleRecipe extends Component {
     this.state = {
       recipe: recipeData,
       id,
-      loading: false
+      loading: true
     };
+  }
+
+  async componentDidMount() {
+    const url = `https://www.food2fork.com/api/get?key=${
+      process.env.REACT_APP_API_KEY
+    }&rId=${this.state.id}`;
+    try {
+      const response = await fetch(url);
+      const responseData = await response.json();
+      console.log(responseData);
+      this.setState({
+        recipe: responseData.recipe,
+        loading: false
+      });
+    } catch (e) {
+      console.log(e);
+    }
   }
   render() {
     const {
